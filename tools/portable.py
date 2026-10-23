@@ -3,7 +3,6 @@ import argparse
 import hashlib
 import importlib.util
 import json
-import re
 import sqlite3
 import tempfile
 from pathlib import Path
@@ -12,7 +11,6 @@ PROFILE = 'gptfs-0.1-directory-1'
 LIMIT = 64 * 1024 * 1024
 TABLES = {'manifest': ('id', 'body'), 'blobs': ('id', 'data'),
           'objects': ('id', 'body'), 'events': ('seq', 'id', 'body')}
-HEX = re.compile(r'sha256:[0-9a-f]{64}\Z')
 
 
 def require(ok, message):

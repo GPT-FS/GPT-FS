@@ -1,6 +1,4 @@
-import importlib.util
 import json
-import sqlite3
 import sys
 import tempfile
 import unittest
@@ -67,7 +65,6 @@ class PortableTests(unittest.TestCase):
         self.s.db.execute('DROP TRIGGER manifest_update')
         self.s.db.execute('UPDATE manifest SET body=?', (canonical(m),))
         self.s.db.execute('DROP TRIGGER events_update')
-        previous = None
         # Use a fresh genesis-only fixture to avoid rewriting event references.
         for table in ('events', 'objects', 'blobs'):
             self.s.db.execute(f'DROP TRIGGER {table}_delete')
