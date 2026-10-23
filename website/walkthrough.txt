@@ -1,0 +1,23 @@
+GPT File System — a short field guide
+
+This recording shows the actual browser UI with a synthetic package.
+
+The project carries original context and provenance. .GPT is the proposed logical
+specification; GPTFS is a working reference implementation.
+
+The notebook contains an original observation and a derived note. The inspector
+recomputes byte hashes and identities, checks relationship targets and the chained
+history, and compares the bundled checkpoint for internal consistency.
+
+Select the derived note to follow its relationship back to the source. Inspect the
+imported skill and receipt history: the skill admission was denied by type scope,
+and shell.exec was denied by the capability ceiling. The browser displays these
+historical decisions; it does not perform independent policy replay.
+
+Change a byte to test a damaged copy. Its claimed digest no longer matches, and
+verification fails. Reset the demo to restore the original snapshot.
+
+Local snapshots are read into browser memory without file upload or persistence.
+A bundled checkpoint is not an independent trust root. Integrity checks do not
+authenticate owners or grant permission. Independent semantic validation, revocation,
+and authenticated authority remain open project work.

@@ -4,5 +4,14 @@ prototype/v0.1/** -text whitespace=cr-at-eol
 *.md text eol=lf
 *.json text eol=lf
 *.yml text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.svg text eol=lf
+*.vtt text eol=lf
+*.txt text eol=lf
+*.png binary
+*.mp4 binary
 # Last match wins: the historical archive is byte-for-byte evidence.
 prototype/v0.1/** -text whitespace=cr-at-eol

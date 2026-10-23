@@ -97,3 +97,17 @@ the original GPTFS verifier on a disposable reconstruction and blocks nonempty
 manifest `required_extensions`. This reused policy engine is not independently
 implemented. Direct use of the historical v0.1 runner does not enforce that new
 extension convention; do not feed extended profiles to it.
+
+
+## Browser snapshot transport — experimental
+
+`gptfs-browser-snapshot-1` is a convenience JSON wrapper for the existing profile,
+not a new authority profile. It has `profile`, `source_profile` (the directory-profile
+identifier), `tables`, and an optional `checkpoint`. Each table uses the same row
+order as the directory binding. A row contains `keys` (identity columns) and `body`
+(the exact raw body encoded with standard padded base64). No JSON body is reserialized
+for identity hashing. Unknown body fields survive export unchanged.
+
+A bundled checkpoint is labeled as internal consistency; separately supplied checkpoints
+are distinguished in the inspector result. Trust in any checkpoint remains external
+to this transport. Browser results always report `policy: not-evaluated`.

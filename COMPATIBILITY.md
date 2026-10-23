@@ -20,6 +20,10 @@ from the matrix. Local validation is on Windows/Python 3.14.
 
 ## Conformance vectors
 
+The public launch adds `gptfs-browser-snapshot-1`, a JSON wrapper around the same raw table bodies encoded as base64. `tools/browser_snapshot.py` exports it from either supported storage binding. `website/integrity.js` is a separately written JavaScript integrity reader. It checks canonical body bytes, hashes, graph targets, chain ordering, genesis, and checkpoints. It does not implement full policy replay. The browser rejects unsupported profiles and reports required extensions without claiming authorization.
+
+The browser requires HTTPS or localhost with Web Crypto support. It reads snapshot JSON, not raw SQLite. Its 32 MiB input and 10,000-row-per-table bounds are narrower than the CLI. The static app has no external dependencies, analytics, or local-file upload. See [docs/DEMO.md](docs/DEMO.md) for behavior and checkpoint boundaries.
+
 `tests/test_portable.py` covers binary and CRLF/NUL bytes, object ancestry, policy
 denials, receipts, external checkpoints, unknown required extensions, repeat export,
 tampering, traversal, duplicate JSON keys, unsupported tables, extra files, and the

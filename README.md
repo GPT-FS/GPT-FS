@@ -3,7 +3,7 @@
 **HYBRID · FLEXIBLE · AGNOSTIC · ALL-INCLUSIVE**
 
 The canonical project home for **Drew Hester / Labyrinth Studios' GPT File System
-initiative** is [DH-LStudios/GPT-FS](https://github.com/DH-LStudios/GPT-FS).
+initiative** is [GPT-FS/GPT-FS](https://github.com/GPT-FS/GPT-FS).
 The [founding charter](CHARTER.md) is dated **October 23, 2026**, building on the
 repository created in 2025.
 
@@ -11,6 +11,14 @@ repository created in 2025.
 SQLite is one storage binding, not a requirement for every implementation. The aim is
 to carry original content, relationships, provenance, and inspectable authority
 records across tools without turning imported text into permission.
+
+[![Conformance](https://github.com/GPT-FS/GPT-FS/actions/workflows/ci.yml/badge.svg)](https://github.com/GPT-FS/GPT-FS/actions/workflows/ci.yml)
+
+**[Try the live inspector](https://gpt-fs.github.io/GPT-FS/) · [First contributions](https://github.com/GPT-FS/GPT-FS/issues?q=is%3Aopen+label%3A%22good+first+issue%22) · [Discussions](https://github.com/GPT-FS/GPT-FS/discussions)**
+
+The browser demo uses synthetic source material and computes integrity checks locally.
+Open your own exported snapshot to inspect its content, relationships, and receipts.
+The inspector evaluates integrity, not permission to execute. [Quickstart and demo guide](docs/DEMO.md).
 
 ## Where the project stands
 
@@ -20,8 +28,7 @@ tested. It provides a Python CLI/zipapp, SQLite object store, SHA-256 identities
 intent ledger, inert Claude `.plugin` import, admission/execution receipts, and
 deterministic verification. All 37 original tests pass locally.
 
-This branch adds a working **SQLite ↔ directory snapshot transport**, an independent
-integrity checker, and 14 interoperability tests. Unknown fields inside stored
+The project includes a working **SQLite ↔ directory snapshot transport**, independent integrity readers in Python and the browser, and interoperability tests. Unknown fields inside stored
 record bodies are preserved. Unknown required manifest extensions block policy
 approval. Unsupported SQL schema additions and unindexed files are rejected rather
 than dropped. Full independent policy validation, revocation, and a writable
@@ -34,7 +41,8 @@ From the repository root:
 
 ```sh
 python prototype/v0.1/gptfs.pyz verify prototype/v0.1/sample/research.gpt --checkpoint prototype/v0.1/sample/checkpoint.json
-python prototype/v0.1/demo.py my-experiment
+python tools/build_demo.py
+python tools/portable.py verify website/data/demo.gpt --checkpoint website/data/demo.checkpoint.json --policy
 python tools/portable.py export prototype/v0.1/sample/research.gpt my-directory
 python tools/portable.py verify my-directory --checkpoint prototype/v0.1/sample/checkpoint.json --policy
 python tools/portable.py import my-directory restored.gpt
@@ -72,4 +80,9 @@ yet, and a hash chain needs an independently retained checkpoint to detect rollb
 The existing [MIT license](LICENSE) and recovered source notices are preserved.
 Names remain provisional pending publication review. This project is independent
 of OpenAI and Anthropic; no affiliation, endorsement, or novelty claim is implied.
-Changes are proposed through a draft PR; the repository remains private.
+The repository is public under the GPT-FS organization. Changes are reviewed through pull requests.
+
+## Public launch work
+
+See [docs/LAUNCH.md](docs/LAUNCH.md) for the launch checklist, concrete contribution paths, and release-candidate scope.
+The current candidate adds a static browser inspector and synthetic fixtures; core revocation and independent full policy validation remain open.
