@@ -8,3 +8,7 @@ my-experiment/
 my-directory/
 plugin-experiment/
 restored.gpt
+build/
+.playwright-cli/
+output/
+playwright-cli.json

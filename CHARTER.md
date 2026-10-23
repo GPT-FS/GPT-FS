@@ -4,7 +4,7 @@
 
 **HYBRID. FLEXIBLE. AGNOSTIC. ALL-INCLUSIVE.**
 
-This charter establishes [DH-LStudios/GPT-FS](https://github.com/DH-LStudios/GPT-FS)
+This charter establishes [GPT-FS/GPT-FS](https://github.com/GPT-FS/GPT-FS)
 as the canonical project home for the GPT File System initiative: its proposals,
 reference implementation, conformance evidence, decisions, and development history.
 It records the founder's direction; it is not a claim of standards-body adoption,

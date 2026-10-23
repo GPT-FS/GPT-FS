@@ -37,3 +37,14 @@ For a vulnerability, use GitHub private vulnerability reporting if enabled; othe
 contact the repository owner privately through an already established channel.
 Do not place secrets or live exploit credentials in an issue. No response-time or
 private-reporting availability guarantee is claimed here.
+
+
+## Browser inspector
+
+The static inspector uses same-origin modules, a restrictive meta CSP, text-node
+rendering of untrusted content, bounded input, and SHA-256 via Web Crypto. It does
+not persist local snapshots, upload their content, fetch external package references,
+or evaluate imported instructions. The bundled synthetic fixture is fetched from
+the site. GitHub serves normal page requests; hosting access logs and browser
+extensions are outside this application's boundary. The reader evaluates integrity,
+not policy permission. Required extensions are surfaced without approval.
