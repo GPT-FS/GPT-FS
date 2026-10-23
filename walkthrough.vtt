@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00.000 --> 00:08.000
+GPT File System carries original context and provenance.
+.GPT is the proposed logical format; GPTFS is a working reference.
+
+00:08.000 --> 00:15.000
+Open the synthetic notebook. The browser independently checks
+byte hashes, object identities, relationships, and the event chain.
+
+00:15.000 --> 00:22.000
+A derived note links back to the original observation.
+Content and its relationships remain inspectable.
+
+00:22.000 --> 00:30.000
+Imported skill text is data. The recorded skill admission is denied,
+and shell.exec is outside the allowed capability scope.
+
+00:30.000 --> 00:38.000
+Change one byte while retaining its claimed identity.
+The independent integrity check detects the mismatch.
+
+00:38.000 --> 00:48.000
+Reset the demo to restore the original snapshot.
+Its hashes and history verify again.
+
+00:48.000 --> 01:00.000
+Local snapshots stay in browser memory. Integrity checks do not
+evaluate authority. Independent policy replay and revocation are next.
