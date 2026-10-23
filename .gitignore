@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*-journal
+*-wal
+*-shm
+.venv/
+my-experiment/
+my-directory/
+plugin-experiment/
+restored.gpt

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-23",
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "results": [
+    {
+      "command": [
+        "python",
+        "tools/check_archive.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "PASS: 21 original members unchanged; pyz source matches\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "output": "test_duplicate_json_keys_rejected (test_portable.PortableTests.test_duplicate_json_keys_rejected) ... ok\ntest_existing_destinations_not_overwritten (test_portable.PortableTests.test_existing_destinations_not_overwritten) ... ok\ntest_external_checkpoint_detects_valid_tail_removal (test_portable.PortableTests.test_external_checkpoint_detects_valid_tail_removal) ... ok\ntest_extra_files_rejected_instead_of_lost (test_portable.PortableTests.test_extra_files_rejected_instead_of_lost) ... ok\ntest_forged_policy_passes_hashes_but_fails_semantic_replay (test_portable.PortableTests.test_forged_policy_passes_hashes_but_fails_semantic_replay) ... ok\ntest_missing_relationship_rejected_independently (test_portable.PortableTests.test_missing_relationship_rejected_independently) ... ok\ntest_path_traversal_rejected (test_portable.PortableTests.test_path_traversal_rejected) ... ok\ntest_policy_denial_survives_conversion (test_portable.PortableTests.test_policy_denial_survives_conversion) ... ok\ntest_real_sample_roundtrip_and_replay (test_portable.PortableTests.test_real_sample_roundtrip_and_replay) ... ok\ntest_roundtrip_bytes_ids_lineage_receipts_and_checkpoint (test_portable.PortableTests.test_roundtrip_bytes_ids_lineage_receipts_and_checkpoint) ... ok\ntest_second_roundtrip_identical_directory (test_portable.PortableTests.test_second_roundtrip_identical_directory) ... ok\ntest_tampered_payload_rejected (test_portable.PortableTests.test_tampered_payload_rejected) ... ok\ntest_unknown_extension_bytes_preserved_without_policy_approval (test_portable.PortableTests.test_unknown_extension_bytes_preserved_without_policy_approval) ... ok\ntest_unknown_tables_rejected_instead_of_lost (test_portable.PortableTests.test_unknown_tables_rejected_instead_of_lost) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 1.191s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "prototype/v0.1",
+      "exit_code": 0,
+      "output": "test_admission_cannot_cross_intents (test_gptfs.GPTFSTest.test_admission_cannot_cross_intents) ... ok\ntest_admission_cannot_cross_objects (test_gptfs.GPTFSTest.test_admission_cannot_cross_objects) ... ok\ntest_aggregate_budget_and_duplicate_admission (test_gptfs.GPTFSTest.test_aggregate_budget_and_duplicate_admission) ... ok\ntest_append_only_triggers (test_gptfs.GPTFSTest.test_append_only_triggers) ... ok\ntest_archive_paths_rejected_atomically (test_gptfs.GPTFSTest.test_archive_paths_rejected_atomically) ... ok\ntest_binary_import_preserved (test_gptfs.GPTFSTest.test_binary_import_preserved) ... ok\ntest_blob_corruption_detected_even_without_trigger (test_gptfs.GPTFSTest.test_blob_corruption_detected_even_without_trigger) ... ok\ntest_canonical_profile (test_gptfs.GPTFSTest.test_canonical_profile) ... ok\ntest_checkpoint_accepts_extension (test_gptfs.GPTFSTest.test_checkpoint_accepts_extension) ... ok\ntest_checkpoint_detects_tail_removal (test_gptfs.GPTFSTest.test_checkpoint_detects_tail_removal) ... ok\ntest_checkpoint_rejects_other_project (test_gptfs.GPTFSTest.test_checkpoint_rejects_other_project) ... ok\ntest_cli_denial_exit_status (test_gptfs.GPTFSTest.test_cli_denial_exit_status) ... ok\ntest_cli_init_refuses_overwrite (test_gptfs.GPTFSTest.test_cli_init_refuses_overwrite) ... ok\ntest_complete_execution_and_replay (test_gptfs.GPTFSTest.test_complete_execution_and_replay) ... ok\ntest_context_cannot_grant_authority (test_gptfs.GPTFSTest.test_context_cannot_grant_authority) ... ok\ntest_corrupt_store_cannot_append (test_gptfs.GPTFSTest.test_corrupt_store_cannot_append) ... ok\ntest_dedup_retains_separate_custody_events (test_gptfs.GPTFSTest.test_dedup_retains_separate_custody_events) ... ok\ntest_default_type_rejects_skill (test_gptfs.GPTFSTest.test_default_type_rejects_skill) ... ok\ntest_derivation_lineage (test_gptfs.GPTFSTest.test_derivation_lineage) ... ok\ntest_duplicate_archive_rejected (test_gptfs.GPTFSTest.test_duplicate_archive_rejected) ... ok\ntest_event_corruption_detected (test_gptfs.GPTFSTest.test_event_corruption_detected) ... ok\ntest_forged_rehashed_admission_denied_by_replay (test_gptfs.GPTFSTest.test_forged_rehashed_admission_denied_by_replay) ... ok\ntest_import_preserves_bytes_no_authority (test_gptfs.GPTFSTest.test_import_preserves_bytes_no_authority) ... ok\ntest_intent_escalation_rejected (test_gptfs.GPTFSTest.test_intent_escalation_rejected) ... ok\ntest_invalid_manifest_no_partial_import (test_gptfs.GPTFSTest.test_invalid_manifest_no_partial_import) ... ok\ntest_manifest_corruption_detected (test_gptfs.GPTFSTest.test_manifest_corruption_detected) ... ok\ntest_missing_admission_denied (test_gptfs.GPTFSTest.test_missing_admission_denied) ... ok\ntest_missing_capability_denied (test_gptfs.GPTFSTest.test_missing_capability_denied) ... ok\ntest_missing_parent_rolls_back (test_gptfs.GPTFSTest.test_missing_parent_rolls_back) ... ok\ntest_object_scope_denied (test_gptfs.GPTFSTest.test_object_scope_denied) ... ok\ntest_operation_failure_rolls_back_evidence (test_gptfs.GPTFSTest.test_operation_failure_rolls_back_evidence) ... ok\ntest_oversized_archive_member_rejected (test_gptfs.GPTFSTest.test_oversized_archive_member_rejected) ... ok\ntest_owner_label_checked (test_gptfs.GPTFSTest.test_owner_label_checked) ... ok\ntest_provenance_changes_object_not_blob (test_gptfs.GPTFSTest.test_provenance_changes_object_not_blob) ... ok\ntest_symlink_archive_rejected (test_gptfs.GPTFSTest.test_symlink_archive_rejected) ... ok\ntest_unknown_version_rejected (test_gptfs.GPTFSTest.test_unknown_version_rejected) ... ok\ntest_wrapped_root_import (test_gptfs.GPTFSTest.test_wrapped_root_import) ... ok\n\n----------------------------------------------------------------------\nRan 37 tests in 2.017s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "gptfs.pyz",
+        "verify",
+        "sample/research.gpt",
+        "--checkpoint",
+        "sample/checkpoint.json"
+      ],
+      "cwd": "prototype/v0.1",
+      "exit_code": 0,
+      "output": "{\n  \"ok\": true,\n  \"objects\": 13,\n  \"blobs\": 13,\n  \"events\": 20,\n  \"head\": \"sha256:fd808f90db33567b8abb8be72674d078cd170f083cf77991518c3c954de3e120\",\n  \"project_id\": \"6632ed6d-ae09-4221-8f0f-d4eec1a9253b\"\n}\n"
+    }
+  ]
+}

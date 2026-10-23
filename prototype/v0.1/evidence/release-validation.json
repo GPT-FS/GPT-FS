@@ -1,0 +1,640 @@
+{
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.29683-SP0",
+  "sqlite": "3.50.4",
+  "checks": [
+    {
+      "command": [
+        "gptfs.pyz",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "0.1.0"
+    },
+    {
+      "command": [
+        "gptfs.pyz",
+        "verify",
+        "sample/research.gpt",
+        "--checkpoint",
+        "sample/checkpoint.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "ok": true,
+        "objects": 13,
+        "blobs": 13,
+        "events": 20,
+        "head": "sha256:fd808f90db33567b8abb8be72674d078cd170f083cf77991518c3c954de3e120",
+        "project_id": "6632ed6d-ae09-4221-8f0f-d4eec1a9253b"
+      }
+    },
+    {
+      "command": [
+        "demo.py",
+        "fresh-demo",
+        "--plugin",
+        "<actual-uploaded-idea-lab.plugin>"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "source": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+        "derived": "sha256:6ed6b611291202cbcbb2df8b05552cfc24b997b0ee21982edde0c1be63c64690",
+        "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+        "admission": {
+          "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+          "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+          "rationale": "The original observation is needed for this measurement.",
+          "code": "within-explicit-scope",
+          "decision": "allow",
+          "role": "data",
+          "granted_authority": [],
+          "receipt": "sha256:8740779389ae75c548a7a8b948b675756e43ebde88fd2e053f225ae54c2d815a"
+        },
+        "denied_admission": {
+          "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+          "object": "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+          "rationale": "Demonstrate skill text excluded by the intent type policy.",
+          "code": "type-not-allowed",
+          "decision": "deny",
+          "role": "data",
+          "granted_authority": [],
+          "receipt": "sha256:9121600cbcbbf85d9d08e9785512a328f07dcf787dfccb315db45f08d67acf15"
+        },
+        "execution": {
+          "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+          "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+          "admission": "sha256:8740779389ae75c548a7a8b948b675756e43ebde88fd2e053f225ae54c2d815a",
+          "capability": "text.stats",
+          "code": "authorized",
+          "evidence": "sha256:51f8c52aca11aa76b94c0fc10a27808ca84c500e71407c6a719414c6d19e7300",
+          "status": "completed",
+          "runner": "gptfs-text-stats/0.1.0",
+          "receipt": "sha256:4dfc0178a661180793c08c46315473825fda0642373155f2cba9728095f4d163"
+        },
+        "denied_execution": {
+          "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+          "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+          "admission": "sha256:8740779389ae75c548a7a8b948b675756e43ebde88fd2e053f225ae54c2d815a",
+          "capability": "shell.exec",
+          "code": "capability-not-granted",
+          "evidence": null,
+          "status": "denied",
+          "runner": "gptfs-text-stats/0.1.0",
+          "receipt": "sha256:ba0ed3723b17ba43aa11d937ad9e811ca7b304b15aa72dbbaa490d093da1bd1e"
+        },
+        "evidence": {
+          "bytes": 72,
+          "characters": 72,
+          "content_digest": "sha256:eaa9ff08260566ec8d4f3c90546d6b5f2da6333abc85814fa6aa814186666984",
+          "lines": 1,
+          "words": 11
+        },
+        "import": {
+          "bundle": "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e",
+          "files": {
+            ".claude-plugin/plugin.json": "sha256:f9777d435b010d0c492b439bf2f7d45f40a350d1dbf83cc04456b4ef2c04829a",
+            "README.md": "sha256:8da90e447d89a4802043ca921c32924fd1a32017aa34ed9dff2893c0fef5dfdc",
+            "skills/brainstorm/SKILL.md": "sha256:a8f7a8c3dd46ad5ca6a4204d348d822d2e574840615e18f9901f6eb620e0ba04",
+            "skills/brainstorm/references/techniques.md": "sha256:384e8f25684c09f5db59ddad1aa3b49a5b37c22129b8d719e84bf31ffaaf5da4",
+            "skills/next-steps/SKILL.md": "sha256:8a78ed1f367c55d136a6f162cb73a5b685d5fdf2e0d2e32a9d8d11687de7347e",
+            "skills/pick-best/SKILL.md": "sha256:51e2147fd58bc0f643bd42911c4449475611d58ab88cb182d02c3c954b9fefc0",
+            "skills/save-session/SKILL.md": "sha256:87b69030cd484a7f0a181d350da7b18bee76bf1b68caf93d2a14fe05fc1fa547",
+            "skills/stress-test/SKILL.md": "sha256:b6c6c0d25c0cc800ea754a25e3bbf1fa0d865bbf76a2d043b55f48696d8e6031"
+          },
+          "receipt": "sha256:177ca6be725d6767df659bd76dd27d6fc6d55ad8be7fb60330c5722ed44ae523"
+        },
+        "verification": {
+          "ok": true,
+          "objects": 13,
+          "blobs": 13,
+          "events": 20,
+          "head": "sha256:177ca6be725d6767df659bd76dd27d6fc6d55ad8be7fb60330c5722ed44ae523",
+          "project_id": "ec0fca26-8777-42de-9ac8-e96bbe409516"
+        }
+      }
+    },
+    {
+      "command": [
+        "gptfs.pyz",
+        "verify",
+        "fresh-demo/research.gpt",
+        "--checkpoint",
+        "fresh-demo/checkpoint.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "ok": true,
+        "objects": 13,
+        "blobs": 13,
+        "events": 20,
+        "head": "sha256:177ca6be725d6767df659bd76dd27d6fc6d55ad8be7fb60330c5722ed44ae523",
+        "project_id": "ec0fca26-8777-42de-9ac8-e96bbe409516"
+      }
+    },
+    {
+      "command": [
+        "gptfs.pyz",
+        "inspect",
+        "fresh-demo/research.gpt"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "manifest": {
+          "canonicalization": "gptfs-json-1",
+          "capability_ceiling": [
+            "text.stats"
+          ],
+          "created_at": "2026-10-23T19:39:28.220778+00:00",
+          "format": "GPTFS",
+          "format_version": "0.1.0",
+          "hash": "sha256",
+          "name": "Drew: context integrity experiment",
+          "owner": "Drew",
+          "project_id": "ec0fca26-8777-42de-9ac8-e96bbe409516",
+          "schema_version": 1
+        },
+        "objects": [
+          {
+            "authority": "none",
+            "blob": "sha256:485fc65e382747d5e17afb66d078e44954a2e802f4d6b4dde3033de4948182f8",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "sample:untrusted-instructions",
+            "parents": [],
+            "schema": 1,
+            "size": 61,
+            "trust": "untrusted",
+            "type": "skill",
+            "id": "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:de841f4b04418a27371cd29ba9387369a20297f7b5ddbe0e9e60827c12b9bd5f",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/skills/brainstorm/references/techniques.md",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 5045,
+            "trust": "untrusted",
+            "type": "reference",
+            "id": "sha256:384e8f25684c09f5db59ddad1aa3b49a5b37c22129b8d719e84bf31ffaaf5da4"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:86d180f8f315f0633c6ecec710c85d888bc3b9934f39541a8d3f38eaca05c5c9",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/skills/pick-best/SKILL.md",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 3758,
+            "trust": "untrusted",
+            "type": "skill",
+            "id": "sha256:51e2147fd58bc0f643bd42911c4449475611d58ab88cb182d02c3c954b9fefc0"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:4379dd201381342563063efbdf8de0a5d2ebbbcfee627cd9117f5c5e92786297",
+            "media_type": "application/json",
+            "origin": "runner:text.stats",
+            "parents": [
+              "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699"
+            ],
+            "schema": 1,
+            "size": 140,
+            "trust": "untrusted",
+            "type": "evidence",
+            "id": "sha256:51f8c52aca11aa76b94c0fc10a27808ca84c500e71407c6a719414c6d19e7300"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:eaa9ff08260566ec8d4f3c90546d6b5f2da6333abc85814fa6aa814186666984",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "sample:original-observation",
+            "parents": [],
+            "schema": 1,
+            "size": 72,
+            "trust": "untrusted",
+            "type": "source",
+            "id": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:45f9996ae07351321a5596040bada47658843bc7320da48710af6733973c4a55",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "sample:human-summary",
+            "parents": [
+              "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699"
+            ],
+            "schema": 1,
+            "size": 28,
+            "trust": "untrusted",
+            "type": "note",
+            "id": "sha256:6ed6b611291202cbcbb2df8b05552cfc24b997b0ee21982edde0c1be63c64690"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:b94d9dbd858db0b444aabeabde96281f08b0792ed08c145ecf39e5d003a60c97",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/skills/save-session/SKILL.md",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 4294,
+            "trust": "untrusted",
+            "type": "skill",
+            "id": "sha256:87b69030cd484a7f0a181d350da7b18bee76bf1b68caf93d2a14fe05fc1fa547"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:f17209e1746399f709365ca9b9be43943ae4c762e244c8d72cdec50b53719ca0",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/skills/next-steps/SKILL.md",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 3470,
+            "trust": "untrusted",
+            "type": "skill",
+            "id": "sha256:8a78ed1f367c55d136a6f162cb73a5b685d5fdf2e0d2e32a9d8d11687de7347e"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:fdb37a22655f0212999e36507fc6f62a2fcd30ed9b9ff3b4b8f6f7f9d64b25c8",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/README.md",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 2082,
+            "trust": "untrusted",
+            "type": "reference",
+            "id": "sha256:8da90e447d89a4802043ca921c32924fd1a32017aa34ed9dff2893c0fef5dfdc"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:4d9ce17e9e965dfe0212722bc1bad0ec79912a81551f36a0f2b51314329a4556",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/skills/brainstorm/SKILL.md",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 4262,
+            "trust": "untrusted",
+            "type": "skill",
+            "id": "sha256:a8f7a8c3dd46ad5ca6a4204d348d822d2e574840615e18f9901f6eb620e0ba04"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:01af0fa7d47ca4988f4e0f9c8a86b899bb29d96bbc52323d75aba40d4d4fdd8a",
+            "media_type": "application/zip",
+            "origin": "claude-plugin:sha256:01af0fa7d47ca4988f4e0f9c8a86b899bb29d96bbc52323d75aba40d4d4fdd8a",
+            "parents": [],
+            "schema": 1,
+            "size": 16372,
+            "trust": "untrusted",
+            "type": "bundle",
+            "id": "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:49c14d300cd8ba3aacd43a4f0474eeef3d855b161a493577e6669a7804199c28",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/skills/stress-test/SKILL.md",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 4363,
+            "trust": "untrusted",
+            "type": "skill",
+            "id": "sha256:b6c6c0d25c0cc800ea754a25e3bbf1fa0d865bbf76a2d043b55f48696d8e6031"
+          },
+          {
+            "authority": "none",
+            "blob": "sha256:4fd21f0a7c65f68ef422206d615ba2e356c935b07616ac316085fc2fadf520fe",
+            "media_type": "text/plain; charset=utf-8",
+            "origin": "claude-plugin:/.claude-plugin/plugin.json",
+            "parents": [
+              "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e"
+            ],
+            "schema": 1,
+            "size": 367,
+            "trust": "untrusted",
+            "type": "plugin-manifest",
+            "id": "sha256:f9777d435b010d0c492b439bf2f7d45f40a350d1dbf83cc04456b4ef2c04829a"
+          }
+        ],
+        "events": [
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.260940+00:00",
+            "data": {
+              "manifest": "sha256:d31901b64ce8d6056ff10efbbad6d45755ad5aadaa10f918ad86ed7dcb17d4a8"
+            },
+            "kind": "genesis",
+            "previous": null,
+            "seq": 1,
+            "id": "sha256:39e4e977ea509108066d461d2052d3311e9b78c6a78547f378c2f8a1c446c65f"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.264427+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+              "origin": "sample:original-observation"
+            },
+            "kind": "custody",
+            "previous": "sha256:39e4e977ea509108066d461d2052d3311e9b78c6a78547f378c2f8a1c446c65f",
+            "seq": 2,
+            "id": "sha256:3a898ec9c0316b7732ca59abf655ca9c5cfb824d3e7d09facebd2a4f61174851"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.267267+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:6ed6b611291202cbcbb2df8b05552cfc24b997b0ee21982edde0c1be63c64690",
+              "origin": "sample:human-summary"
+            },
+            "kind": "custody",
+            "previous": "sha256:3a898ec9c0316b7732ca59abf655ca9c5cfb824d3e7d09facebd2a4f61174851",
+            "seq": 3,
+            "id": "sha256:6bb66154b8688d95b8c5a2a12b35fa2bc4cc378b127390e63db090f79800cc08"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.269952+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+              "origin": "sample:untrusted-instructions"
+            },
+            "kind": "custody",
+            "previous": "sha256:6bb66154b8688d95b8c5a2a12b35fa2bc4cc378b127390e63db090f79800cc08",
+            "seq": 4,
+            "id": "sha256:b51b3efa522c9fd520789e94c0d9b831351540ae5ca0d3fed66a797254d27145"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.272974+00:00",
+            "data": {
+              "capabilities": [
+                "text.stats"
+              ],
+              "max_bytes": 1024,
+              "objects": [
+                "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+                "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+                "sha256:6ed6b611291202cbcbb2df8b05552cfc24b997b0ee21982edde0c1be63c64690"
+              ],
+              "text": "Measure the original note; do not run imported instructions.",
+              "types": [
+                "note",
+                "reference",
+                "source"
+              ]
+            },
+            "kind": "intent",
+            "previous": "sha256:b51b3efa522c9fd520789e94c0d9b831351540ae5ca0d3fed66a797254d27145",
+            "seq": 5,
+            "id": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.276140+00:00",
+            "data": {
+              "code": "within-explicit-scope",
+              "decision": "allow",
+              "granted_authority": [],
+              "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+              "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+              "rationale": "The original observation is needed for this measurement.",
+              "role": "data"
+            },
+            "kind": "admission",
+            "previous": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+            "seq": 6,
+            "id": "sha256:8740779389ae75c548a7a8b948b675756e43ebde88fd2e053f225ae54c2d815a"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.279500+00:00",
+            "data": {
+              "code": "type-not-allowed",
+              "decision": "deny",
+              "granted_authority": [],
+              "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+              "object": "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+              "rationale": "Demonstrate skill text excluded by the intent type policy.",
+              "role": "data"
+            },
+            "kind": "admission",
+            "previous": "sha256:8740779389ae75c548a7a8b948b675756e43ebde88fd2e053f225ae54c2d815a",
+            "seq": 7,
+            "id": "sha256:9121600cbcbbf85d9d08e9785512a328f07dcf787dfccb315db45f08d67acf15"
+          },
+          {
+            "actor": "runner:local",
+            "at": "2026-10-23T19:39:28.285096+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:51f8c52aca11aa76b94c0fc10a27808ca84c500e71407c6a719414c6d19e7300",
+              "origin": "runner:text.stats"
+            },
+            "kind": "custody",
+            "previous": "sha256:9121600cbcbbf85d9d08e9785512a328f07dcf787dfccb315db45f08d67acf15",
+            "seq": 8,
+            "id": "sha256:1e691228761da0c99e8311947d1a3b37faa74d6d536d79459523c30f7f958bd2"
+          },
+          {
+            "actor": "runner:local",
+            "at": "2026-10-23T19:39:28.285176+00:00",
+            "data": {
+              "admission": "sha256:8740779389ae75c548a7a8b948b675756e43ebde88fd2e053f225ae54c2d815a",
+              "capability": "text.stats",
+              "code": "authorized",
+              "evidence": "sha256:51f8c52aca11aa76b94c0fc10a27808ca84c500e71407c6a719414c6d19e7300",
+              "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+              "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+              "runner": "gptfs-text-stats/0.1.0",
+              "status": "completed"
+            },
+            "kind": "execution",
+            "previous": "sha256:1e691228761da0c99e8311947d1a3b37faa74d6d536d79459523c30f7f958bd2",
+            "seq": 9,
+            "id": "sha256:4dfc0178a661180793c08c46315473825fda0642373155f2cba9728095f4d163"
+          },
+          {
+            "actor": "runner:local",
+            "at": "2026-10-23T19:39:28.287928+00:00",
+            "data": {
+              "admission": "sha256:8740779389ae75c548a7a8b948b675756e43ebde88fd2e053f225ae54c2d815a",
+              "capability": "shell.exec",
+              "code": "capability-not-granted",
+              "evidence": null,
+              "intent": "sha256:786e04f679b95613a90618ffc352bd0c499c52c02c05c9040827600a695ade1a",
+              "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+              "runner": "gptfs-text-stats/0.1.0",
+              "status": "denied"
+            },
+            "kind": "execution",
+            "previous": "sha256:4dfc0178a661180793c08c46315473825fda0642373155f2cba9728095f4d163",
+            "seq": 10,
+            "id": "sha256:ba0ed3723b17ba43aa11d937ad9e811ca7b304b15aa72dbbaa490d093da1bd1e"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.293757+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e",
+              "origin": "claude-plugin:sha256:01af0fa7d47ca4988f4e0f9c8a86b899bb29d96bbc52323d75aba40d4d4fdd8a"
+            },
+            "kind": "custody",
+            "previous": "sha256:ba0ed3723b17ba43aa11d937ad9e811ca7b304b15aa72dbbaa490d093da1bd1e",
+            "seq": 11,
+            "id": "sha256:351f4dbb756a3a9c503fefd8dad3edd2d571e2f653f5c28cd06fee062ff6929f"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.293884+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:f9777d435b010d0c492b439bf2f7d45f40a350d1dbf83cc04456b4ef2c04829a",
+              "origin": "claude-plugin:/.claude-plugin/plugin.json"
+            },
+            "kind": "custody",
+            "previous": "sha256:351f4dbb756a3a9c503fefd8dad3edd2d571e2f653f5c28cd06fee062ff6929f",
+            "seq": 12,
+            "id": "sha256:5d83890b5c7d5036db56e4516e02145b9f140d3288aa7f2f146c46f48a4e6d55"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.293941+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:8da90e447d89a4802043ca921c32924fd1a32017aa34ed9dff2893c0fef5dfdc",
+              "origin": "claude-plugin:/README.md"
+            },
+            "kind": "custody",
+            "previous": "sha256:5d83890b5c7d5036db56e4516e02145b9f140d3288aa7f2f146c46f48a4e6d55",
+            "seq": 13,
+            "id": "sha256:a64fb86af0af542083503ac0c447b60fd14f6d08fa14ec017c4758994553bc3d"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.293993+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:a8f7a8c3dd46ad5ca6a4204d348d822d2e574840615e18f9901f6eb620e0ba04",
+              "origin": "claude-plugin:/skills/brainstorm/SKILL.md"
+            },
+            "kind": "custody",
+            "previous": "sha256:a64fb86af0af542083503ac0c447b60fd14f6d08fa14ec017c4758994553bc3d",
+            "seq": 14,
+            "id": "sha256:85f3e3c55a887b81042948e6dfbd247110b8676fe04b2baa3887224976486507"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.294040+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:384e8f25684c09f5db59ddad1aa3b49a5b37c22129b8d719e84bf31ffaaf5da4",
+              "origin": "claude-plugin:/skills/brainstorm/references/techniques.md"
+            },
+            "kind": "custody",
+            "previous": "sha256:85f3e3c55a887b81042948e6dfbd247110b8676fe04b2baa3887224976486507",
+            "seq": 15,
+            "id": "sha256:89df4dee730adf6f1aa09595fe3a8a5d55f91859981705fc4630984f3faea24a"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.294083+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:8a78ed1f367c55d136a6f162cb73a5b685d5fdf2e0d2e32a9d8d11687de7347e",
+              "origin": "claude-plugin:/skills/next-steps/SKILL.md"
+            },
+            "kind": "custody",
+            "previous": "sha256:89df4dee730adf6f1aa09595fe3a8a5d55f91859981705fc4630984f3faea24a",
+            "seq": 16,
+            "id": "sha256:306832a89b052fa10a90ca7edb98d920a2e1208b664064077184fdee03181a54"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.294125+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:51e2147fd58bc0f643bd42911c4449475611d58ab88cb182d02c3c954b9fefc0",
+              "origin": "claude-plugin:/skills/pick-best/SKILL.md"
+            },
+            "kind": "custody",
+            "previous": "sha256:306832a89b052fa10a90ca7edb98d920a2e1208b664064077184fdee03181a54",
+            "seq": 17,
+            "id": "sha256:10259aca80a45284c7f8869f2aad7d9293ff4ff52f6e847899cac43aa4992308"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.294217+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:87b69030cd484a7f0a181d350da7b18bee76bf1b68caf93d2a14fe05fc1fa547",
+              "origin": "claude-plugin:/skills/save-session/SKILL.md"
+            },
+            "kind": "custody",
+            "previous": "sha256:10259aca80a45284c7f8869f2aad7d9293ff4ff52f6e847899cac43aa4992308",
+            "seq": 18,
+            "id": "sha256:80b2210776943f770624ff2140c546054fcdbbc7d6d55424920d4b50a0337403"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.294263+00:00",
+            "data": {
+              "action": "ingest",
+              "object": "sha256:b6c6c0d25c0cc800ea754a25e3bbf1fa0d865bbf76a2d043b55f48696d8e6031",
+              "origin": "claude-plugin:/skills/stress-test/SKILL.md"
+            },
+            "kind": "custody",
+            "previous": "sha256:80b2210776943f770624ff2140c546054fcdbbc7d6d55424920d4b50a0337403",
+            "seq": 19,
+            "id": "sha256:3b30a01907db8ade795636a2866cb70c1d78b5bb191413bccdb79058eb89c67f"
+          },
+          {
+            "actor": "Drew",
+            "at": "2026-10-23T19:39:28.294281+00:00",
+            "data": {
+              "adapter": "claude-plugin/0.1",
+              "authority_granted": [],
+              "bundle": "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e",
+              "files": {
+                ".claude-plugin/plugin.json": "sha256:f9777d435b010d0c492b439bf2f7d45f40a350d1dbf83cc04456b4ef2c04829a",
+                "README.md": "sha256:8da90e447d89a4802043ca921c32924fd1a32017aa34ed9dff2893c0fef5dfdc",
+                "skills/brainstorm/SKILL.md": "sha256:a8f7a8c3dd46ad5ca6a4204d348d822d2e574840615e18f9901f6eb620e0ba04",
+                "skills/brainstorm/references/techniques.md": "sha256:384e8f25684c09f5db59ddad1aa3b49a5b37c22129b8d719e84bf31ffaaf5da4",
+                "skills/next-steps/SKILL.md": "sha256:8a78ed1f367c55d136a6f162cb73a5b685d5fdf2e0d2e32a9d8d11687de7347e",
+                "skills/pick-best/SKILL.md": "sha256:51e2147fd58bc0f643bd42911c4449475611d58ab88cb182d02c3c954b9fefc0",
+                "skills/save-session/SKILL.md": "sha256:87b69030cd484a7f0a181d350da7b18bee76bf1b68caf93d2a14fe05fc1fa547",
+                "skills/stress-test/SKILL.md": "sha256:b6c6c0d25c0cc800ea754a25e3bbf1fa0d865bbf76a2d043b55f48696d8e6031"
+              },
+              "plugin_name": "idea-lab"
+            },
+            "kind": "import",
+            "previous": "sha256:3b30a01907db8ade795636a2866cb70c1d78b5bb191413bccdb79058eb89c67f",
+            "seq": 20,
+            "id": "sha256:177ca6be725d6767df659bd76dd27d6fc6d55ad8be7fb60330c5722ed44ae523"
+          }
+        ]
+      }
+    }
+  ],
+  "suite_exit_code": 0
+}

@@ -1,0 +1,126 @@
+{
+  "source_name": "idea-lab.plugin",
+  "sha256": "01af0fa7d47ca4988f4e0f9c8a86b899bb29d96bbc52323d75aba40d4d4fdd8a",
+  "archive_bytes": 16372,
+  "entry_count": 16,
+  "file_count": 8,
+  "expanded_file_bytes": 27641,
+  "members": [
+    {
+      "path": "skills/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "skills/stress-test/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "skills/stress-test/SKILL.md",
+      "directory": false,
+      "bytes": 4363,
+      "sha256": "49c14d300cd8ba3aacd43a4f0474eeef3d855b161a493577e6669a7804199c28"
+    },
+    {
+      "path": "skills/pick-best/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "skills/pick-best/SKILL.md",
+      "directory": false,
+      "bytes": 3758,
+      "sha256": "86d180f8f315f0633c6ecec710c85d888bc3b9934f39541a8d3f38eaca05c5c9"
+    },
+    {
+      "path": "skills/brainstorm/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "skills/brainstorm/references/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "skills/brainstorm/references/techniques.md",
+      "directory": false,
+      "bytes": 5045,
+      "sha256": "de841f4b04418a27371cd29ba9387369a20297f7b5ddbe0e9e60827c12b9bd5f"
+    },
+    {
+      "path": "skills/brainstorm/SKILL.md",
+      "directory": false,
+      "bytes": 4262,
+      "sha256": "4d9ce17e9e965dfe0212722bc1bad0ec79912a81551f36a0f2b51314329a4556"
+    },
+    {
+      "path": "skills/next-steps/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "skills/next-steps/SKILL.md",
+      "directory": false,
+      "bytes": 3470,
+      "sha256": "f17209e1746399f709365ca9b9be43943ae4c762e244c8d72cdec50b53719ca0"
+    },
+    {
+      "path": "skills/save-session/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "skills/save-session/SKILL.md",
+      "directory": false,
+      "bytes": 4294,
+      "sha256": "b94d9dbd858db0b444aabeabde96281f08b0792ed08c145ecf39e5d003a60c97"
+    },
+    {
+      "path": ".claude-plugin/",
+      "directory": true,
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "directory": false,
+      "bytes": 367,
+      "sha256": "4fd21f0a7c65f68ef422206d615ba2e356c935b07616ac316085fc2fadf520fe"
+    },
+    {
+      "path": "README.md",
+      "directory": false,
+      "bytes": 2082,
+      "sha256": "fdb37a22655f0212999e36507fc6f62a2fcd30ed9b9ff3b4b8f6f7f9d64b25c8"
+    }
+  ],
+  "manifest": {
+    "name": "idea-lab",
+    "version": "0.1.0",
+    "description": "A brainstorming partner for any topic: generate lots of ideas fast, stress-test them, pick the best one, plan first steps, and save the whole session as a document.",
+    "keywords": [
+      "brainstorm",
+      "ideas",
+      "ideation",
+      "creativity",
+      "problem-solving",
+      "decision-making",
+      "planning"
+    ],
+    "license": "MIT"
+  },
+  "screenshot": {
+    "name": "Screenshot 2026-10-22 153502.png",
+    "sha256": "5209c3eb96bc81bd109651c3c76fd4e6726d141c358066cc33d501336454caae",
+    "observed": "Saved idea-lab plugin card, .plugin save dialog, manifest and five-skill tree; matches archive."
+  }
+}

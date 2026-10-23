@@ -1,0 +1,107 @@
+[
+  {
+    "path": "build_release.py",
+    "bytes": 1076,
+    "sha256": "c6a055f4812f0efdff45379f752ac272153cdbfbcfd6b9164a6b1ac1d7e472ad"
+  },
+  {
+    "path": "COMPARISON.md",
+    "bytes": 5405,
+    "sha256": "b0a2d95e288ad6c7326b3bb3a2481bcd2a6981f021c4a11419d8ca79e5762caf"
+  },
+  {
+    "path": "demo.py",
+    "bytes": 2472,
+    "sha256": "32b7bdef591e63f833f425550dc1817a47d4c046089cadf8cca2ac8b091f94f2"
+  },
+  {
+    "path": "evidence/archive-inventory.json",
+    "bytes": 3468,
+    "sha256": "6eff602d2afab1d5145eb93d798df3f553791d2779cd70a86000d0882e18be7e"
+  },
+  {
+    "path": "evidence/release-validation.json",
+    "bytes": 28950,
+    "sha256": "b1c65d8f8f2173719d883134da60c15c78696aacb78e8322d5ec6070416fe2f6"
+  },
+  {
+    "path": "evidence/test-results.txt",
+    "bytes": 3781,
+    "sha256": "d37b26169bc45e6d5c5f65e06639f375169c39d40621fd883c46f4d558658fe2"
+  },
+  {
+    "path": "examples/observation.txt",
+    "bytes": 72,
+    "sha256": "eaa9ff08260566ec8d4f3c90546d6b5f2da6333abc85814fa6aa814186666984"
+  },
+  {
+    "path": "gptfs.cmd",
+    "bytes": 58,
+    "sha256": "b46de9456f200733ee4ccdd8f3f67afa305d43892267a8838d5b38eceb92b825"
+  },
+  {
+    "path": "gptfs.py",
+    "bytes": 23476,
+    "sha256": "ee6e712497f2318fe8f82b8f915f25a568770632a69502dc5a81e2b65b735c8b"
+  },
+  {
+    "path": "gptfs.pyz",
+    "bytes": 6964,
+    "sha256": "d0a289b0d72fc8833c60e7615016ff24081c42bc20a0aab5f47161c5a4a3f145"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 1272,
+    "sha256": "e8293010339b1a3e1e0d1833d73485fe5457a336c388d727d345d9fa5c431719"
+  },
+  {
+    "path": "README.md",
+    "bytes": 6498,
+    "sha256": "5944529cb32d1191c54be73fbb00d82fd89e233b5827f599c6f171934943df7b"
+  },
+  {
+    "path": "ROADMAP.md",
+    "bytes": 2699,
+    "sha256": "bd5e428364abf3d71115d8c820f944bd29357d7150dc1c03964a86080e570299"
+  },
+  {
+    "path": "sample/checkpoint.json",
+    "bytes": 250,
+    "sha256": "c5a087a54c45802d6af268e6aa2fef3f69e9a88a893379b36217353c499345ec"
+  },
+  {
+    "path": "sample/ledger.json",
+    "bytes": 12151,
+    "sha256": "012556ffdfce360c87871b15174958e414ec95b676e3c8153a061cbdce2db6b3"
+  },
+  {
+    "path": "sample/report.json",
+    "bytes": 3972,
+    "sha256": "f21402a04c27f0aae15ce8c41836aa5c700709a909daf80644919e146d8d15f3"
+  },
+  {
+    "path": "sample/research.gpt",
+    "bytes": 106496,
+    "sha256": "6354c0426cdd77bb88b358e0fe23c9d6df56176ff6c44a63294e655561b4c5de"
+  },
+  {
+    "path": "SECURITY.md",
+    "bytes": 4607,
+    "sha256": "9b0a31f653af7e81955c3f0c060b240424ab52b750a79501d7a82fd254243cf8"
+  },
+  {
+    "path": "SPEC.md",
+    "bytes": 11834,
+    "sha256": "ae8e59f8fd00aa16eae39b24f3644944b127b0e46311028a98cb1c9ee3780fd5"
+  },
+  {
+    "path": "TEST-RESULTS.md",
+    "bytes": 2595,
+    "sha256": "41933636d0b36261bb9e8bcd8fbb3a85fbc875c2f2a078b3b1f675fb2ed5995f"
+  },
+  {
+    "path": "tests/test_gptfs.py",
+    "bytes": 12280,
+    "sha256": "b88df9796776b0c02aee0fa4c9f04bb4b256eff66556a459afc9263a6f40b0e7"
+  }
+]

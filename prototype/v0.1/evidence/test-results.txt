@@ -1,0 +1,42 @@
+test_admission_cannot_cross_intents (test_gptfs.GPTFSTest.test_admission_cannot_cross_intents) ... ok
+test_admission_cannot_cross_objects (test_gptfs.GPTFSTest.test_admission_cannot_cross_objects) ... ok
+test_aggregate_budget_and_duplicate_admission (test_gptfs.GPTFSTest.test_aggregate_budget_and_duplicate_admission) ... ok
+test_append_only_triggers (test_gptfs.GPTFSTest.test_append_only_triggers) ... ok
+test_archive_paths_rejected_atomically (test_gptfs.GPTFSTest.test_archive_paths_rejected_atomically) ... ok
+test_binary_import_preserved (test_gptfs.GPTFSTest.test_binary_import_preserved) ... ok
+test_blob_corruption_detected_even_without_trigger (test_gptfs.GPTFSTest.test_blob_corruption_detected_even_without_trigger) ... ok
+test_canonical_profile (test_gptfs.GPTFSTest.test_canonical_profile) ... ok
+test_checkpoint_accepts_extension (test_gptfs.GPTFSTest.test_checkpoint_accepts_extension) ... ok
+test_checkpoint_detects_tail_removal (test_gptfs.GPTFSTest.test_checkpoint_detects_tail_removal) ... ok
+test_checkpoint_rejects_other_project (test_gptfs.GPTFSTest.test_checkpoint_rejects_other_project) ... ok
+test_cli_denial_exit_status (test_gptfs.GPTFSTest.test_cli_denial_exit_status) ... ok
+test_cli_init_refuses_overwrite (test_gptfs.GPTFSTest.test_cli_init_refuses_overwrite) ... ok
+test_complete_execution_and_replay (test_gptfs.GPTFSTest.test_complete_execution_and_replay) ... ok
+test_context_cannot_grant_authority (test_gptfs.GPTFSTest.test_context_cannot_grant_authority) ... ok
+test_corrupt_store_cannot_append (test_gptfs.GPTFSTest.test_corrupt_store_cannot_append) ... ok
+test_dedup_retains_separate_custody_events (test_gptfs.GPTFSTest.test_dedup_retains_separate_custody_events) ... ok
+test_default_type_rejects_skill (test_gptfs.GPTFSTest.test_default_type_rejects_skill) ... ok
+test_derivation_lineage (test_gptfs.GPTFSTest.test_derivation_lineage) ... ok
+test_duplicate_archive_rejected (test_gptfs.GPTFSTest.test_duplicate_archive_rejected) ... ok
+test_event_corruption_detected (test_gptfs.GPTFSTest.test_event_corruption_detected) ... ok
+test_forged_rehashed_admission_denied_by_replay (test_gptfs.GPTFSTest.test_forged_rehashed_admission_denied_by_replay) ... ok
+test_import_preserves_bytes_no_authority (test_gptfs.GPTFSTest.test_import_preserves_bytes_no_authority) ... ok
+test_intent_escalation_rejected (test_gptfs.GPTFSTest.test_intent_escalation_rejected) ... ok
+test_invalid_manifest_no_partial_import (test_gptfs.GPTFSTest.test_invalid_manifest_no_partial_import) ... ok
+test_manifest_corruption_detected (test_gptfs.GPTFSTest.test_manifest_corruption_detected) ... ok
+test_missing_admission_denied (test_gptfs.GPTFSTest.test_missing_admission_denied) ... ok
+test_missing_capability_denied (test_gptfs.GPTFSTest.test_missing_capability_denied) ... ok
+test_missing_parent_rolls_back (test_gptfs.GPTFSTest.test_missing_parent_rolls_back) ... ok
+test_object_scope_denied (test_gptfs.GPTFSTest.test_object_scope_denied) ... ok
+test_operation_failure_rolls_back_evidence (test_gptfs.GPTFSTest.test_operation_failure_rolls_back_evidence) ... ok
+test_oversized_archive_member_rejected (test_gptfs.GPTFSTest.test_oversized_archive_member_rejected) ... ok
+test_owner_label_checked (test_gptfs.GPTFSTest.test_owner_label_checked) ... ok
+test_provenance_changes_object_not_blob (test_gptfs.GPTFSTest.test_provenance_changes_object_not_blob) ... ok
+test_symlink_archive_rejected (test_gptfs.GPTFSTest.test_symlink_archive_rejected) ... ok
+test_unknown_version_rejected (test_gptfs.GPTFSTest.test_unknown_version_rejected) ... ok
+test_wrapped_root_import (test_gptfs.GPTFSTest.test_wrapped_root_import) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 2.129s
+
+OK

@@ -1,0 +1,76 @@
+{
+  "source": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+  "derived": "sha256:6ed6b611291202cbcbb2df8b05552cfc24b997b0ee21982edde0c1be63c64690",
+  "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+  "admission": {
+    "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+    "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+    "rationale": "The original observation is needed for this measurement.",
+    "code": "within-explicit-scope",
+    "decision": "allow",
+    "role": "data",
+    "granted_authority": [],
+    "receipt": "sha256:6cf5bc9302073534829bb469c0a50a786ce901bd3e2e9c7ecca4ca80ce32e30a"
+  },
+  "denied_admission": {
+    "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+    "object": "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+    "rationale": "Demonstrate skill text excluded by the intent type policy.",
+    "code": "type-not-allowed",
+    "decision": "deny",
+    "role": "data",
+    "granted_authority": [],
+    "receipt": "sha256:e05037b492ebe24b39600ef0df5f0b35cad57ae2d316d4e162448942e828a7a2"
+  },
+  "execution": {
+    "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+    "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+    "admission": "sha256:6cf5bc9302073534829bb469c0a50a786ce901bd3e2e9c7ecca4ca80ce32e30a",
+    "capability": "text.stats",
+    "code": "authorized",
+    "evidence": "sha256:51f8c52aca11aa76b94c0fc10a27808ca84c500e71407c6a719414c6d19e7300",
+    "status": "completed",
+    "runner": "gptfs-text-stats/0.1.0",
+    "receipt": "sha256:156db977da0433a540e8b70353a1a48264f922f955d51718cc475d9cde4209af"
+  },
+  "denied_execution": {
+    "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+    "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+    "admission": "sha256:6cf5bc9302073534829bb469c0a50a786ce901bd3e2e9c7ecca4ca80ce32e30a",
+    "capability": "shell.exec",
+    "code": "capability-not-granted",
+    "evidence": null,
+    "status": "denied",
+    "runner": "gptfs-text-stats/0.1.0",
+    "receipt": "sha256:551faa77f85389a97ca47f5dd34a509ccf110a06bcff99ebc96cc3cb66a36f84"
+  },
+  "evidence": {
+    "bytes": 72,
+    "characters": 72,
+    "content_digest": "sha256:eaa9ff08260566ec8d4f3c90546d6b5f2da6333abc85814fa6aa814186666984",
+    "lines": 1,
+    "words": 11
+  },
+  "import": {
+    "bundle": "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e",
+    "files": {
+      ".claude-plugin/plugin.json": "sha256:f9777d435b010d0c492b439bf2f7d45f40a350d1dbf83cc04456b4ef2c04829a",
+      "README.md": "sha256:8da90e447d89a4802043ca921c32924fd1a32017aa34ed9dff2893c0fef5dfdc",
+      "skills/brainstorm/SKILL.md": "sha256:a8f7a8c3dd46ad5ca6a4204d348d822d2e574840615e18f9901f6eb620e0ba04",
+      "skills/brainstorm/references/techniques.md": "sha256:384e8f25684c09f5db59ddad1aa3b49a5b37c22129b8d719e84bf31ffaaf5da4",
+      "skills/next-steps/SKILL.md": "sha256:8a78ed1f367c55d136a6f162cb73a5b685d5fdf2e0d2e32a9d8d11687de7347e",
+      "skills/pick-best/SKILL.md": "sha256:51e2147fd58bc0f643bd42911c4449475611d58ab88cb182d02c3c954b9fefc0",
+      "skills/save-session/SKILL.md": "sha256:87b69030cd484a7f0a181d350da7b18bee76bf1b68caf93d2a14fe05fc1fa547",
+      "skills/stress-test/SKILL.md": "sha256:b6c6c0d25c0cc800ea754a25e3bbf1fa0d865bbf76a2d043b55f48696d8e6031"
+    },
+    "receipt": "sha256:fd808f90db33567b8abb8be72674d078cd170f083cf77991518c3c954de3e120"
+  },
+  "verification": {
+    "ok": true,
+    "objects": 13,
+    "blobs": 13,
+    "events": 20,
+    "head": "sha256:fd808f90db33567b8abb8be72674d078cd170f083cf77991518c3c954de3e120",
+    "project_id": "6632ed6d-ae09-4221-8f0f-d4eec1a9253b"
+  }
+}
