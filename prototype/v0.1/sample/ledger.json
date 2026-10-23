@@ -1,0 +1,301 @@
+[
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.558719+00:00",
+    "data": {
+      "manifest": "sha256:d5f23a0d2be73cca0a8f440a9332407a72f664e2f1cc0d26a4f4553710f52a06"
+    },
+    "kind": "genesis",
+    "previous": null,
+    "seq": 1,
+    "id": "sha256:2840aef95fe8cd9a852f72faaf2ad1a35ec2c940b1cf8db1da7fd4843f419788"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.561554+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+      "origin": "sample:original-observation"
+    },
+    "kind": "custody",
+    "previous": "sha256:2840aef95fe8cd9a852f72faaf2ad1a35ec2c940b1cf8db1da7fd4843f419788",
+    "seq": 2,
+    "id": "sha256:2cbc7e2df963f60dcf427363839252a01d1bada6e7af663a78297eead4698249"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.563926+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:6ed6b611291202cbcbb2df8b05552cfc24b997b0ee21982edde0c1be63c64690",
+      "origin": "sample:human-summary"
+    },
+    "kind": "custody",
+    "previous": "sha256:2cbc7e2df963f60dcf427363839252a01d1bada6e7af663a78297eead4698249",
+    "seq": 3,
+    "id": "sha256:351b44b8b352191d42de173ec4b33a18b8d1faa6db144ed18cc89b49b0d4b212"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.566380+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+      "origin": "sample:untrusted-instructions"
+    },
+    "kind": "custody",
+    "previous": "sha256:351b44b8b352191d42de173ec4b33a18b8d1faa6db144ed18cc89b49b0d4b212",
+    "seq": 4,
+    "id": "sha256:7eb44e2effa4f3dbcb539f8f5a6dc6d6c2aa2d679cb2f285c9b489851f39b7ce"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.568352+00:00",
+    "data": {
+      "capabilities": [
+        "text.stats"
+      ],
+      "max_bytes": 1024,
+      "objects": [
+        "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+        "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+        "sha256:6ed6b611291202cbcbb2df8b05552cfc24b997b0ee21982edde0c1be63c64690"
+      ],
+      "text": "Measure the original note; do not run imported instructions.",
+      "types": [
+        "note",
+        "reference",
+        "source"
+      ]
+    },
+    "kind": "intent",
+    "previous": "sha256:7eb44e2effa4f3dbcb539f8f5a6dc6d6c2aa2d679cb2f285c9b489851f39b7ce",
+    "seq": 5,
+    "id": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.570717+00:00",
+    "data": {
+      "code": "within-explicit-scope",
+      "decision": "allow",
+      "granted_authority": [],
+      "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+      "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+      "rationale": "The original observation is needed for this measurement.",
+      "role": "data"
+    },
+    "kind": "admission",
+    "previous": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+    "seq": 6,
+    "id": "sha256:6cf5bc9302073534829bb469c0a50a786ce901bd3e2e9c7ecca4ca80ce32e30a"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.572988+00:00",
+    "data": {
+      "code": "type-not-allowed",
+      "decision": "deny",
+      "granted_authority": [],
+      "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+      "object": "sha256:30100a6125e10b93cf20a5497084b295e6c8e71a4776a585ebc4799443b39f86",
+      "rationale": "Demonstrate skill text excluded by the intent type policy.",
+      "role": "data"
+    },
+    "kind": "admission",
+    "previous": "sha256:6cf5bc9302073534829bb469c0a50a786ce901bd3e2e9c7ecca4ca80ce32e30a",
+    "seq": 7,
+    "id": "sha256:e05037b492ebe24b39600ef0df5f0b35cad57ae2d316d4e162448942e828a7a2"
+  },
+  {
+    "actor": "runner:local",
+    "at": "2026-10-23T19:33:54.577650+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:51f8c52aca11aa76b94c0fc10a27808ca84c500e71407c6a719414c6d19e7300",
+      "origin": "runner:text.stats"
+    },
+    "kind": "custody",
+    "previous": "sha256:e05037b492ebe24b39600ef0df5f0b35cad57ae2d316d4e162448942e828a7a2",
+    "seq": 8,
+    "id": "sha256:1361695abcd0c683692b78d8d5992088a123ad338185d2be614276925b02d73e"
+  },
+  {
+    "actor": "runner:local",
+    "at": "2026-10-23T19:33:54.577710+00:00",
+    "data": {
+      "admission": "sha256:6cf5bc9302073534829bb469c0a50a786ce901bd3e2e9c7ecca4ca80ce32e30a",
+      "capability": "text.stats",
+      "code": "authorized",
+      "evidence": "sha256:51f8c52aca11aa76b94c0fc10a27808ca84c500e71407c6a719414c6d19e7300",
+      "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+      "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+      "runner": "gptfs-text-stats/0.1.0",
+      "status": "completed"
+    },
+    "kind": "execution",
+    "previous": "sha256:1361695abcd0c683692b78d8d5992088a123ad338185d2be614276925b02d73e",
+    "seq": 9,
+    "id": "sha256:156db977da0433a540e8b70353a1a48264f922f955d51718cc475d9cde4209af"
+  },
+  {
+    "actor": "runner:local",
+    "at": "2026-10-23T19:33:54.579820+00:00",
+    "data": {
+      "admission": "sha256:6cf5bc9302073534829bb469c0a50a786ce901bd3e2e9c7ecca4ca80ce32e30a",
+      "capability": "shell.exec",
+      "code": "capability-not-granted",
+      "evidence": null,
+      "intent": "sha256:89365fd1ccec03ea840f7bdb49feeb4d70eb95702bce55bd6858fa867702f742",
+      "object": "sha256:5d2e93abfb8db666035d5378819c2fee415aa85e5588c741e47774f34f642699",
+      "runner": "gptfs-text-stats/0.1.0",
+      "status": "denied"
+    },
+    "kind": "execution",
+    "previous": "sha256:156db977da0433a540e8b70353a1a48264f922f955d51718cc475d9cde4209af",
+    "seq": 10,
+    "id": "sha256:551faa77f85389a97ca47f5dd34a509ccf110a06bcff99ebc96cc3cb66a36f84"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.584736+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e",
+      "origin": "claude-plugin:sha256:01af0fa7d47ca4988f4e0f9c8a86b899bb29d96bbc52323d75aba40d4d4fdd8a"
+    },
+    "kind": "custody",
+    "previous": "sha256:551faa77f85389a97ca47f5dd34a509ccf110a06bcff99ebc96cc3cb66a36f84",
+    "seq": 11,
+    "id": "sha256:417cdce83ecc867da558054ba41a5c2d432b804aa3e9ca1dd3abc856e3878399"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.584843+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:f9777d435b010d0c492b439bf2f7d45f40a350d1dbf83cc04456b4ef2c04829a",
+      "origin": "claude-plugin:/.claude-plugin/plugin.json"
+    },
+    "kind": "custody",
+    "previous": "sha256:417cdce83ecc867da558054ba41a5c2d432b804aa3e9ca1dd3abc856e3878399",
+    "seq": 12,
+    "id": "sha256:c7cbb9fe3f876798cf74e093af28a894176c20bad5d35eda099ef0097c278f40"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.584896+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:8da90e447d89a4802043ca921c32924fd1a32017aa34ed9dff2893c0fef5dfdc",
+      "origin": "claude-plugin:/README.md"
+    },
+    "kind": "custody",
+    "previous": "sha256:c7cbb9fe3f876798cf74e093af28a894176c20bad5d35eda099ef0097c278f40",
+    "seq": 13,
+    "id": "sha256:7bd7593075c7ea5fb78f04cb5f52fe00a0b8058fbcad9ae45fc03e8e0bdb6889"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.584944+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:a8f7a8c3dd46ad5ca6a4204d348d822d2e574840615e18f9901f6eb620e0ba04",
+      "origin": "claude-plugin:/skills/brainstorm/SKILL.md"
+    },
+    "kind": "custody",
+    "previous": "sha256:7bd7593075c7ea5fb78f04cb5f52fe00a0b8058fbcad9ae45fc03e8e0bdb6889",
+    "seq": 14,
+    "id": "sha256:2c37dfe04ce29789b7132a428467f982644fc1700e3b40663c9f819d11cac6d7"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.584986+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:384e8f25684c09f5db59ddad1aa3b49a5b37c22129b8d719e84bf31ffaaf5da4",
+      "origin": "claude-plugin:/skills/brainstorm/references/techniques.md"
+    },
+    "kind": "custody",
+    "previous": "sha256:2c37dfe04ce29789b7132a428467f982644fc1700e3b40663c9f819d11cac6d7",
+    "seq": 15,
+    "id": "sha256:01e9848c5dc778fc2aa2bfcce006b175ddf42b83b7b9eca2ed6014361c3acb83"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.585024+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:8a78ed1f367c55d136a6f162cb73a5b685d5fdf2e0d2e32a9d8d11687de7347e",
+      "origin": "claude-plugin:/skills/next-steps/SKILL.md"
+    },
+    "kind": "custody",
+    "previous": "sha256:01e9848c5dc778fc2aa2bfcce006b175ddf42b83b7b9eca2ed6014361c3acb83",
+    "seq": 16,
+    "id": "sha256:4a76235175caa5a8f0ca24b5119734dd605d37c90b644d76b70a73ba59601b76"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.585063+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:51e2147fd58bc0f643bd42911c4449475611d58ab88cb182d02c3c954b9fefc0",
+      "origin": "claude-plugin:/skills/pick-best/SKILL.md"
+    },
+    "kind": "custody",
+    "previous": "sha256:4a76235175caa5a8f0ca24b5119734dd605d37c90b644d76b70a73ba59601b76",
+    "seq": 17,
+    "id": "sha256:1f85b131d2754ba8a57724bf77f6f567c07308dca5b66bf0448e38154d2bb9a1"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.585131+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:87b69030cd484a7f0a181d350da7b18bee76bf1b68caf93d2a14fe05fc1fa547",
+      "origin": "claude-plugin:/skills/save-session/SKILL.md"
+    },
+    "kind": "custody",
+    "previous": "sha256:1f85b131d2754ba8a57724bf77f6f567c07308dca5b66bf0448e38154d2bb9a1",
+    "seq": 18,
+    "id": "sha256:300a26436b7fd722719b0d5e847be5e0056dcfeb1747f4d795733ef7b7c56a8f"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.585168+00:00",
+    "data": {
+      "action": "ingest",
+      "object": "sha256:b6c6c0d25c0cc800ea754a25e3bbf1fa0d865bbf76a2d043b55f48696d8e6031",
+      "origin": "claude-plugin:/skills/stress-test/SKILL.md"
+    },
+    "kind": "custody",
+    "previous": "sha256:300a26436b7fd722719b0d5e847be5e0056dcfeb1747f4d795733ef7b7c56a8f",
+    "seq": 19,
+    "id": "sha256:89645fb6efa3e9fa05b95aef1a64bd7817a31e57f1795470b9dd5380d7e04ab2"
+  },
+  {
+    "actor": "Drew",
+    "at": "2026-10-23T19:33:54.585184+00:00",
+    "data": {
+      "adapter": "claude-plugin/0.1",
+      "authority_granted": [],
+      "bundle": "sha256:a95660427b69009eb9d1486bc9f2c30a11ec258312eb1aad0f9f9a4c35ce105e",
+      "files": {
+        ".claude-plugin/plugin.json": "sha256:f9777d435b010d0c492b439bf2f7d45f40a350d1dbf83cc04456b4ef2c04829a",
+        "README.md": "sha256:8da90e447d89a4802043ca921c32924fd1a32017aa34ed9dff2893c0fef5dfdc",
+        "skills/brainstorm/SKILL.md": "sha256:a8f7a8c3dd46ad5ca6a4204d348d822d2e574840615e18f9901f6eb620e0ba04",
+        "skills/brainstorm/references/techniques.md": "sha256:384e8f25684c09f5db59ddad1aa3b49a5b37c22129b8d719e84bf31ffaaf5da4",
+        "skills/next-steps/SKILL.md": "sha256:8a78ed1f367c55d136a6f162cb73a5b685d5fdf2e0d2e32a9d8d11687de7347e",
+        "skills/pick-best/SKILL.md": "sha256:51e2147fd58bc0f643bd42911c4449475611d58ab88cb182d02c3c954b9fefc0",
+        "skills/save-session/SKILL.md": "sha256:87b69030cd484a7f0a181d350da7b18bee76bf1b68caf93d2a14fe05fc1fa547",
+        "skills/stress-test/SKILL.md": "sha256:b6c6c0d25c0cc800ea754a25e3bbf1fa0d865bbf76a2d043b55f48696d8e6031"
+      },
+      "plugin_name": "idea-lab"
+    },
+    "kind": "import",
+    "previous": "sha256:89645fb6efa3e9fa05b95aef1a64bd7817a31e57f1795470b9dd5380d7e04ab2",
+    "seq": 20,
+    "id": "sha256:fd808f90db33567b8abb8be72674d078cd170f083cf77991518c3c954de3e120"
+  }
+]

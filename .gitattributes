@@ -1,0 +1,8 @@
+# Preserve recovered archive bytes even on Windows checkouts.
+prototype/v0.1/** -text whitespace=cr-at-eol
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+# Last match wins: the historical archive is byte-for-byte evidence.
+prototype/v0.1/** -text whitespace=cr-at-eol

@@ -1,0 +1,1 @@
+Context can inform a task. Only explicit local intent grants authority.
